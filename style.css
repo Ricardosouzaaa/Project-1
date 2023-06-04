@@ -73,6 +73,7 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
   top: 50%;
+  /*animation: slide-back 0.4s forwards;*/
 }
 
 #switch span {
@@ -87,8 +88,12 @@ body * {
 }
 
 .light #switch button {
+  /*animation: slide-in 0.4s forwards;*/
   right: -30px;
   left: initial;
+}
+#switch button:hover{
+  outline: 4px solid var(--stroke-color);
 }
 
 ul {
@@ -133,5 +138,23 @@ footer {
   }
   .light {
     --bg-url: url(./assets/bg-desktop-branco.jpg);
+  }
+}
+/*
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    right: -30px;
+  }
+}
+
+@keyframes {
+  from {
+    right: -30px;
+  }
+  to {
+    left: 0;
   }
 }
